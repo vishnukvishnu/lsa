@@ -1,0 +1,309 @@
+
+@import '../../scss/variables';
+
+.my-nominations {
+    .hide{
+        display: none;
+    }
+    .show {
+        display:block;
+    }
+    .sub-navigation{
+            background: color(dark-violet);
+            color: color(white);
+            padding-left: 34px;
+            position: fixed;
+            width: 100%;
+            top: 46px;
+            z-index: 99;
+        span {
+            size: 20px;
+            font-family: 'WiproAkkurat-Regular';
+            display: inline-block;
+        }
+        p{
+            size: 16px;
+            font-family: 'WiproAkkurat-Bold';
+            display: inline-block;
+            margin: 12px 0px 12px 24px;
+        }
+    }
+
+    .my-nomination-container{
+        margin: 30px 155px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        height: auto;
+        background:color(white);
+
+        .nomination-wrapper{
+            padding: 20px 60px 70px 60px;
+            margin-top: 130px;
+            .title {
+                size: 18px;
+                font-family: 'WiproAkkurat-Bold';
+                color: color(light-violet);
+            }
+            .icon-circle_alert{
+                font-size: 24px;
+                color: color(light-violet);
+            }
+            .border-yellow{
+                border-bottom: 1px solid color(sunny-yellow);
+            }
+            .input-wrapper {
+                    position: relative;
+                .text-dark{
+                    opacity:1;
+                }
+                input {
+                    opacity: .4;
+                    font-size: 14px;
+                    font-family: 'WiproAkkurat-Regular';
+                    color: color(black);
+                }
+                p{
+                    position: absolute;
+                    right: 0px;
+                    margin-bottom: 0px;
+                    top: 50px;
+                    font-size: 12px;
+                    font-family: 'AkkuratStd-Italic';
+                }
+                .icon-search{
+                    position: absolute;
+                    right: 0px;
+                    top: 6px;
+                    color: color(light-violet);
+                    font-size: 20px;
+                }
+                .search-fields{
+                    caret-color: color(black);
+                    opacity: 1;
+                }
+            }
+            .warning-wrapper{   
+                display: table;
+                background: color(light-gray);
+                padding: 17px;
+                border-radius: 4px;
+                width: 100%;
+                .icon-circle_alert {
+                    color:color(ruby-red);
+                    font-size: 24px;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                p{
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 16px;
+                    opacity: .8;
+                    font-size: 14px;
+                    font-family: 'WiproAkkurat-Regular';
+                }
+            }
+            .photograph-wrapper{
+                font-family: 'WiproAkkurat-Regular';
+                 padding: 17px 0px;
+                 .margin-r {
+                     margin-right: 4%;
+                 }
+                
+                .half-col{
+                    border: 1px solid color(light-gray);
+                    border-radius: 4px;
+                    width: 48%;
+                    height: 100px;
+                    .d-wrapper::after{
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    .d-wrapper{
+                        padding: 20px;
+                        .first-cell{
+                            float: left;
+                            .sub-title{
+                                font-size: 16px;
+                                margin-bottom: 4px;
+                            }
+                            .description{
+                                font-size: 10px;
+                                opacity: .6;
+                                margin-bottom: 0px;
+                            }
+                        }
+    
+                        .second-cell{
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            background: color(light-gray);
+                            float: right;
+                            position: relative;
+                            .icon-attachment{
+                                font-size: 28px;
+                                position: absolute;
+                                top: 10px;
+                                left: 12px;
+                                opacity:.5;
+                                cursor: pointer;
+                            }
+                        }
+                        .editable{
+                            .icon{
+                                opacity: .6;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .profile-picture{
+                            text-align: center;
+                        img{
+                            width: 140px;
+                            height: 140px;
+                            border-radius: 50%;
+                            margin: 30px 20px 50px 20px;
+                        }
+                    }
+ 
+                     .memmorable-picture-gallery{
+                         margin-left: 30px;
+                         text-align: center;
+                        img{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            border:5px solid color(white);
+                            margin-left: -28px;
+                            margin-top: 50px;
+                        }
+                        .img-first-m-left{
+                            margin-left: 25px;
+                        }
+                        .add-one-more{
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            border: 5px solid #FFFFFF;
+                            margin-left: -30px;
+                            background: color(light-violet);
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-top: 50px;
+                                    .value {
+                                        color: color(white);
+                                        font-size: 30px;
+                                        margin-top: 25px;
+                                        display: inline-block;
+                                        text-align: center;
+                                    }
+                                }
+                     }
+            
+                }
+                .img-gallery-width{
+                    height: 300px;
+                 }
+                 .box-border-bottom{
+                     border-bottom: 1px solid #F4F4F4;
+                 }
+            }
+
+            .title {
+                p{
+                    font-size: 14px;
+                    font-family: 'WiproAkkurat-Bold';
+                    margin-bottom: 0px;
+                    color: color(black);
+                }
+            }
+            .suggested-names{
+                .star-wrapper{
+                    background: color(light-gray);
+                    border-radius: 4px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                    height: auto;
+                    background:color(white);    
+                    display: table;
+                    width: 32%;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    padding: 14px;
+                    border: 1px solid color(light-gray);
+                    .img-wrapper{
+                            display: table-cell;
+                            vertical-align: middle;
+                            img{
+                                height: 50px;
+                                width: 50px;
+                                border-radius: 50%;
+                            }
+                    }
+                    .description{
+                        display: table-cell;
+                        vertical-align: middle;
+                        .name{
+                            font-size: 14px;
+                            margin-bottom: 4px;
+                        }
+                        .email{
+                            font-size: 12px;
+                            opacity: .67;
+                            margin-bottom: 0px;
+                        }
+                        .icon-star_filled{
+                            display: inline-block;
+                            float:right;
+                        }
+                        input:checked ~ .icon-star_filled {
+                            color: color(light-violet);
+                        }
+                    }
+                    .star{
+                        display: table-cell;
+                    }
+                }
+                .star-wrapper:nth-child(2){
+                    margin: 8px 2%;
+                } 
+                .star-wrapper:nth-child(5){
+                    margin: 8px 2%;
+                }
+            }
+
+            .btn-wrapper {
+                float: right;
+                button {
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-family: 'WiproAkkurat-Regular';
+                    font-size: 14px;
+                    float: right;
+                }
+                .cancel {
+                    color: color(btn-gray);
+                    background: color(white);
+                    border: 1px solid color(btn-gray);
+                    padding: 4px 30px;
+                }
+                .submit{
+                    color: color(white);
+                    background: color(light-violet);
+                    border:0px;
+                    margin-left: 25px;
+                    padding: 4px 40px;
+                }
+                .update{
+                    color: color(white);
+                    background: color(light-violet);
+                    border:0px;
+                    margin-left: 25px;
+                    padding: 4px 30px;
+                }
+            }
+        }
+    }
+}   

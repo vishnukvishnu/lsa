@@ -1,0 +1,230 @@
+
+@import './variables';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'Akkurat-Bold';
+    src: url('/assets/fonts/Akkurat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'akkurat-mono';
+    src: url('/assets/fonts/akkurat-mono.ttf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Bold';
+    src: url('/assets/fonts/AkkuratStd-Bold.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-BoldItalic';
+    src: url('/assets/fonts/AkkuratStd-BoldItalic.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Italic';
+    src: url('/assets/fonts/AkkuratStd-Italic.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Light';
+    src: url('/assets/fonts/AkkuratStd-Light.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-LightItalic';
+    src: url('/assets/fonts/AkkuratStd-LightItalic.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Regular';
+    src: url('/assets/fonts/AkkuratStd-Regular.otf');
+}
+@font-face {
+  font-family: 'WiproAkkurat-Regular';
+  src: url('/assets/fonts/WiproAkkurat-Regular.otf');
+}
+@font-face {
+  font-family: 'WiproAkkurat-Bold';
+  src: url('/assets/fonts/WiproAkkurat-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Navigation-icons';
+    src:  url('/assets/icons/Navigation-icons.eot?hthupc');
+    src:  url('/assets/icons/App_Icons.eot');
+    src:  url('/assets/icons/App_Icons.woff');
+    src:  url('/assets/icons/Navigation-icons.eot?hthupc#iefix') format('embedded-opentype'),
+      url('/assets/icons/Navigation-icons.ttf?hthupc') format('truetype'),
+      url('/assets/icons/Navigation-icons.woff?hthupc') format('woff'),
+      url('/assets/icons/Navigation-icons.svg?hthupc#Navigation-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Navigation-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  hr {
+    margin:0px !important;
+  }
+    // Styles for Bootstrap 4
+
+  .row {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+  }
+
+  .col-sm-1,.col-md-1,.col-lg-1,
+  .col-sm-2,.col-md-2,.col-lg-2,
+  .col-sm-3,.col-md-3,.col-lg-3,
+  .col-sm-4,.col-md-4,.col-lg-4,
+  .col-sm-5,.col-md-5,.col-lg-5,
+  .col-sm-6,.col-md-6,.col-lg-6,
+  .col-sm-7,.col-md-7,.col-lg-7,
+  .col-sm-8,.col-md-8,.col-lg-8,
+  .col-sm-9,.col-md-9,.col-lg-9,
+  .col-sm-10,.col-md-10,.col-lg-10,
+  .col-sm-11,.col-md-11,.col-lg-11,
+  .col-sm-12,.col-md-12,.col-lg-12 {
+padding-left: 0px !important;
+padding-right: 0px !important;
+  }
+
+    //  Styles for angular material design
+
+//   style for Stepper
+  .mat-tab-header {
+    border:0px;
+   }
+   .mat-tab-label-container {
+    background: color(dark-violet);
+    position: fixed;
+    width: 100%;
+    top: 45px;
+    z-index: 99 !important;
+   }
+
+   .mat-tab-label-content {
+    color: color(white);
+    padding: 0 60px;
+   }
+
+  .mat-tab-label-active .mat-tab-label-content {
+    color:color(white);
+  }
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color:color(sunny-yellow);
+    height: 3px;
+  }
+  .mat-tab-label {
+    min-width: 110px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .nomination-wrapper .input-wrapper .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: color(black);
+    opacity: .8;
+    font-size: 12px;
+  }
+  // .app-main-container .mat-tab-label-active {
+  //   opacity: 1;
+  // }
+  .app-main-container .mat-tab-label{
+    font-family: 'AkkuratStd-Regular';
+    font-size: 14px;
+    opacity: 1;
+  }
+   // Citation wrapper 
+
+  .citations-container{
+    .mat-tab-list .mat-tab-labels{
+      justify-content: flex-start;
+    }
+    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+      background-color:color(light-violet);
+      height: 3px;
+      width: 200px !important;
+    }
+    .mat-tab-label-container {
+      background: color(light-gray);
+     }
+    .mat-tab-label-content {
+      color:color(black);
+      opacity: .6;
+      font-family: 'AkkuratStd-Regular';
+    }
+     .mat-tab-label-active .mat-tab-label-content {
+      color:color(dark-violet);
+      opacity: 1;
+      font-family: 'AkkuratStd-Bold';
+    }
+  } 
+
+
+  // Styles for Image Gallery
+
+  
+.ngx-gallery-arrow-right .ngx-gallery-arrow {
+  right: 10px !important;
+}
+.ngx-gallery-arrow-left .ngx-gallery-arrow {
+  left: 10px !important;
+}
+ .ngx-gallery-icon .ngx-gallery-icon-content{
+  color: #707070;
+  border: 1px solid#D7D7D7;
+  padding: 0px 8px;
+  border-radius: 50%;
+  background:#D7D7D7;
+ }
+ .ngx-gallery-arrow.ngx-gallery-disabled .ngx-gallery-icon-content{
+  background:color(white);
+ }
+
+.ngx-gallery-icons-wrapper {
+  position: absolute !important;
+  top: 36% !important;
+  right: 53% !important;
+  z-index: 99999999999 !important;
+  display: block;
+}
+.ngx-gallery-layout {
+  padding-bottom: 5px;
+}
+.ngx-gallery-layout.thumbnails-bottom ngx-gallery-thumbnails{
+margin-top: 0px !important;
+}
+
+.ngx-gallery-thumbnail-size-cover .ngx-gallery-thumbnails .ngx-gallery-thumbnail{
+  height: calc(100% - 25px) !important;
+}
+
+.ngx-gallery-image-size-cover .ngx-gallery-image{
+  background-size: 725px 350px, cover !important;
+}
+
+// Common classes 
+
+.hand-icon {
+  cursor: pointer;
+}
+
+.rout-demo{
+  position: relative;
+}
+.rout-demo>*{
+ display: block;
+}
+
+.fiter-scroll {
+  overflow: hidden;
+}

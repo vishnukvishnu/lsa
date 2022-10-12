@@ -1,0 +1,286 @@
+@import '../../scss/variables';
+
+.main-img-container {
+    position: relative;
+    background-image: linear-gradient(#151721, #000000);
+    img{
+        width: 100%;
+        height: 100vh;
+        opacity: .3 ;
+    }
+    .btn-pdf-downlaod{
+        font-size: 14px;
+        padding: 8px 10px 6px 10px;
+        border: 0px;
+        border-radius: 4px;
+        position: absolute;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .bottom{
+        background: color(light-violet);
+        bottom: -65px;
+        right: 0px;
+        color: color(white);
+      }
+      .top{
+          background: color(sunny-yellow);
+          right: 0px;
+          top: -100px;
+      }
+    .my-tenure-container{
+        font-family: 'WiproAkkurat-Regular';
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        z-index: 9;
+        .stepper{
+            padding-top: 30px;
+            padding-right: 70px;
+            padding-left: 0px;
+           .col-sm-1-half{
+                flex: 0 0 13.666667%;
+                max-width: 13.666667%;
+            }
+          
+            .circle{
+                background: color(sunny-yellow);
+                border-radius: 50%;
+                width:48px;
+                height: 48px;
+                position: relative;
+                float: right;
+                cursor: pointer;
+                left: -8px;
+            }
+            .stright-lines{
+                position: absolute;
+                top: 22px;
+                border-top: 2px dashed;
+                color: #FFFFFF;
+                width: 70%;
+                display: block;
+            }
+            .icon-status_pending{
+                font-size: 24px;
+                position: absolute;
+                left: 169px;
+                top: 12px;
+            }
+            .icon-check_mark {
+                font-size: 24px;
+                position: absolute;
+                left: 14px;
+                top: 12px;
+            }
+            .icon-status_pending{
+                color: color(white);
+                opacity: .7;
+            }
+            .blurred{
+                opacity: .3;
+            }
+            .years {
+                font-size: 16px;
+                color: white;
+                font-family: 'WiproAkkurat-Bold';
+                opacity: .6;
+                width: 90px;
+                height: 48px;
+                position: relative;
+                float: right;
+                cursor: pointer;
+                left: 75px;
+                top: 51px;
+            }
+            .years-first{
+                position: relative;
+                left: 100px;
+                top: 48px;
+                color: white;
+                font-size: 16px;
+                font-family: 'WiproAkkurat-Bold';
+            }
+        }
+        .tenure-wrapper{
+            margin: 150px 110px 100px 110px !important;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            height: auto;
+            background:color(white);
+            position: relative;
+            .logo-wrapper {
+                img {
+                    border-radius: 50%;
+                    opacity: 1;
+                }
+            }
+            .vertical-line{
+                flex: 0 0 9.6%;
+                max-width: 9.6%;
+                border-right: 2px solid color(light-violet);
+                margin-top: 73px;
+                margin-bottom: 10px;
+                position: relative;
+                .radio-round{
+                    position: absolute;
+                    left: 92px;
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid color(light-violet);
+                    border-radius: 50%;
+                    background: color(white);
+                    .inner-circle{
+                        background: color(light-violet);
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        margin-left: 4px;
+                        margin-top: 4px;
+                    }
+                }
+                .radio-round1{
+                    top: 231px; 
+                }
+                .radio-round2{
+                    top: 846px;    
+                }
+                .radio-round3{
+                    top: 1563px;   
+                }
+                .radio-round4{
+                    top: 2116px; 
+                }
+                .radio-round5{
+                    top: 2668px; 
+                }
+            }
+            .col-sm-11{
+                flex: 0 0 89.4%;
+                max-width: 89.4%;
+                padding-left: 30px !important;
+            .name-wrapper{
+                padding-left: 60px !important;
+                position: relative;
+            .name {
+                color: color(light-violet);
+                font-size: 32px;
+                margin-bottom: 0px;
+                line-height: 34px;
+            }
+            .about {
+                font-size: 14px;
+                opacity: .8;
+                margin-top: 14px;
+                margin-bottom: 30px;
+            }
+            }
+
+            .journey-container{
+            margin-left: 40px !important; 
+            margin-right: 150px !important; 
+
+        .title {
+            font-size: 26px;
+            color: color(border-gray);
+        }
+        .img-container{
+            position: relative;
+            padding:15px !important;
+            border-radius: 4px;
+            height: auto;
+            padding: 10px;
+            // border: 1px solid color(light-gray);
+            box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+                img{    
+                    opacity: 1;
+                    height: 322px;
+                }
+
+            .flex-container{
+                display: flex;
+                flex-wrap: wrap;
+                .flex-item {
+                    flex: 0 0 31.5%;
+                    max-width: 31.5%;
+                    margin-top: 12px;
+                    img{
+                      height: 150px;  
+                    }
+                }
+                .flex-item:nth-child(even){
+                    margin: 12px 2.75% 0px 2.75%;
+                }
+            }
+           
+            .sub-title {
+                font-size: 24px;
+                color:color(light-violet);
+                display: inline-block;
+                margin-top: 24px;
+            }   
+            span{
+                font-size: 14px;
+            }
+            .description {
+                font-size: 14px;
+            }
+        }   
+        .content-arrow{
+            img{
+                width: 35px;
+                height: 50px;
+                position: absolute;
+                top: 58px;
+                left: -35px;
+            }
+          
+            }
+          }
+        }
+    }
+ }
+}
+
+  
+  .logo-wrapper {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+  }
+img{
+    //backface-visibility: hidden;
+}
+  .flip-card-front{
+    animation: animi 10s infinite linear;
+    // backface-visibility: hidden;
+    position: absolute;
+    top: -109px !important;
+    left: 0px !important;
+    width: 210px !important;
+    height: 210px !important;
+    
+  }
+  .flip-card-back {
+    animation: anim 10s infinite linear;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 154px !important;
+    height: 154px !important;
+    top: -81px !important;
+    left: 28px !important;
+    transform: rotateY(180deg);
+  }
+
+  @keyframes anim {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}
+}
+
+@keyframes animi {
+    from {transform: rotateY(180deg);}
+    to {transform: rotateY(360deg);}
+}
+
+
+

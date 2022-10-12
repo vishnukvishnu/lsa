@@ -1,0 +1,22 @@
+
+<div class="pending-citation-wrapper row" [@routerTransition]>
+  <div class="citation" *ngFor="let item of pedingData">
+      <div class="profile-details">
+          <div class="t-row">
+          <div class="img-wrapper">
+                  <img [src] ="item.img" alt="">
+          </div>
+          <div class="description">
+              <p class="name">{{item.name}}</p>
+              <p class="email">{{item.email}}</p>
+              <p class="position">{{item.position}}</p>
+          </div>
+          </div>
+          <div class="d-day-wrapper">
+              <p class="days-left">{{item.daysLeft}}</p>
+              <p>{{item.citations}}</p>
+              <button (click) = "myCitations()" >SEND WISHES</button>
+          </div>
+      </div>
+  </div>
+</div>

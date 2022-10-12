@@ -1,0 +1,63 @@
+<div class="header-container">
+       <div class="" [ngClass]="profieVissible ? 'overlayy':''" (click)="profieOverlayHide()"></div>
+       <div class="" [ngClass]="notificationVissible ? 'overlayy':''" (click)="notificationOverlayHide()"></div>
+    <header>
+     <ul class="logo-wrapper" (click) = "home()">
+        <li><span class="mw">mW</span></li>
+        <li><span class="line"></span></li>
+        <li class="circle-wrapper hand-icon">
+            <span class="logo"></span>
+            <span class="logo-name">long service awards</span>
+        </li>
+     </ul>
+     
+     <ul class="icons-wrapper">
+         <li class="pt-2" (click)="profielOvelay()">
+             <img class = "admin-svg " src="../../assets/images/admin.svg" alt="">
+             
+         </li>
+         <li (click)="notificationOverlay()" class="pr-3">
+             <span class="icon-notification"></span>
+            
+             <span class="badge"><span class="value">6</span></span>
+            </li>
+         <li><span class="icon-logout"></span></li>
+     </ul>
+    </header>
+
+        <div class="filter filter-profile" [ngClass]="profieVissible ? 'filter-visible':'filter-hidden'">
+                <div class="row">
+                    <ul>
+                        <li class = "title">SWITCH ROLE</li>
+                        <li class="roles ">      
+                             <img class = "user" src="../../assets/images/user.svg" alt="">
+                            <span class="name">Employee</span>
+                        </li>
+                        <li class="roles roles-boxshadow">
+                            <img class = "admin" src="../../assets/images/admin.svg" alt="">
+                            <span class="name">Administrator</span>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="filter filter-notification" [ngClass]="notificationVissible ? 'filter-visible':'filter-hidden'">
+            <div class="row">
+                <ul>
+                    <li class = "title">NOTIFICATIONS</li>
+                    <li class="roles">
+                        <span class="notification">Samuel Reynolds has nominated you to provide citations. 
+                            Please write citation now
+                        </span>
+                        <button (click) = "Tocitations()">CLICK HERE</button>
+                    </li>
+                    <li class="roles roles-boxshadow">
+                        <span class="notification">Darwin Williams has nominated you to provide citations. 
+                            Please write citation now
+                        </span>
+                        <button (click) = "Tocitations()">CLICK HERE</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,29 @@
+<div class="fluid-container citations-container" [@routerTransition]>
+  <!-- <mat-tab-group >
+
+    <mat-tab label="Pending citations"> 
+            <app-pending-citations></app-pending-citations>
+    </mat-tab>
+    
+    <mat-tab label="Completed citations">
+          <app-completed-citations></app-completed-citations>
+    </mat-tab>
+
+  </mat-tab-group> -->
+  
+  <div class="citation-nav-wrapper">
+    <ul>
+        <li>
+            <a routerLink = "/home/citations/pending-citations" (click) = "removeActive()"
+            routerLinkActive="active-link">Pending citations</a>
+        </li>
+        <li>
+            <a routerLink = "/home/citations/completed-citations" id = 'pending-active'
+             routerLinkActive="active-link" (click) = "addACtive()">Completed citations</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>   

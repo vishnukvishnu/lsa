@@ -1,0 +1,159 @@
+
+<div class="fluid-container profile-citation-wrapper">
+
+<div class="sub-navigation" (click) = "home()">
+    <span class="icon-back_arrow"></span>
+    <p>My citations</p>
+</div>
+
+<div class="main-title">
+  <p>Your citation for Samuel</p>
+</div>
+
+<div class="citation" >  
+  <div class="profile-details">      
+        <div class="row t-row">
+        <div class="col-sm-1 img-wrapper">
+                <img src="../../assets/images/profile-black.jpg" alt="">
+        </div>
+        <div class="col-sm-10 description">
+            <p class="name">Darwin Williams</p>
+            <p class="email">darwin.williams@wipro.com</p>
+            <p class="position">Tech Lead</p>
+        </div>
+        <div class="col-sm-1 completed">
+            <div class="circle">
+                <span class="icon-check_mark"></span>
+            </div> 
+        </div>
+        </div>
+          
+        <div class="about-edit-section">
+          <div class="row about-section">
+              <p class="title">What would you like to tell Samuel</p>
+              <p>There are those that just work, and let their good work speak for them, 
+                Samuel is one fo them. The last few months I have …worked closely with Samuel I have found 
+                him to be reliable, sincere, committed and full of positive energy!
+                Samuel is great team player and is always keen to learn and do more.
+                Managing multiple MG accounts, running progressions for entire FS BU, 
+                managing business continuity fo banking or leading the domain charter for Banking.
+                Samuel manages to multitask with panache! 
+              </p>   
+          </div>
+          
+          <div class="row mt-3 input-wrapper">
+              <mat-form-field class="example-full-width col-12 col-sm-12 col-md-12 col-lg-12">
+                <input class = "text-dark" matInput
+                value ="Samuel it has been pleasure knowing and working with you, wishing you many more wonderful years in Wipro!" >
+              </mat-form-field>
+              <p>2000 characters</p>
+          </div>
+  
+          <div class="warning-wrapper mt-3">
+            <div class="col-sm-12">
+            <span class="icon-circle_alert"></span>
+            <p>Please note that your citation would not be edited or verified post your submission. 
+              Kindly review the content prior to hitting the submit button.
+            </p>
+            </div>
+          </div>
+  
+          <div class="row photograph-wrapper mt-3">
+              <div class="half-col margin-r pr-4 pl-4">
+
+                <div class="d-wrapper" [ngClass] = "profileImg  ? '': ''">
+                <div class="first-cell">
+                <p class="sub-title">Memorable photographs</p>
+                <p class="description">(JPEG & PNG format with</p>
+                <p class="description">500Wx500 H px, file size 2MB only</p>
+                </div>
+                <div class="second-cell hand-icon" *ngIf = "!profileImg">
+                    <input hidden type="file" (change)="handleFileInput($event.target.files)" 
+                    accept="image/*" #fileInput>
+                  <span  (click)="fileInput.click()" class="icon-attachment"></span>
+                </div>
+
+                <div class="editable pull-right" [ngClass]="!profileImg ? 'hide' : 'show'">
+                    <input hidden type="file" (change)="handleFileInput($event.target.files)" 
+                    accept="image/*" #fileInput>
+                    <span (click)="fileInput.click()" class="icon icon-edit hand-icon mr-2"></span>
+                    <span class="icon icon-delete hand-icon" (click) = "delteImage()"></span>
+                  </div>
+                </div>
+
+                <div class="memmorable-picture-gallery" >
+                    <img class="img" *ngFor="let item of updatedImageGallery" [src]="item" >
+                    <span class = "add-one-more"  *ngIf = "profileImg">
+                      <span class="value">+{{imgCount}}</span>
+                    </span>
+                </div>
+              </div>
+
+          
+              <div class="half-col margin-r pr-4 pl-4">
+
+                <div class="d-wrapper" [ngClass] = "profileImg  ? '': ''">
+                <div class="first-cell">
+                <p class="sub-title">Profile photograph</p>
+                <p class="description">(JPEG & PNG format with</p>
+                <p class="description">500Wx500 H px, file size 2MB only</p>
+                </div>
+                <div class="second-cell hand-icon" *ngIf = "!profileImg">
+                    <input hidden type="file" (change)="fileChangeEvent($event)"
+                    accept="image/*" #fileInput>
+                  <span  (click)="fileInput.click()" class="icon-attachment"></span>
+                 
+                </div>
+
+                <div class="editable pull-right" [ngClass]="!profileImg ? 'hide' : 'show'">
+                    <input hidden type="file" (change)="handleFileInput($event.target.files)" 
+                    accept="image/*" #fileInput>
+                    <span (click)="fileInput.click()" class="icon icon-edit hand-icon mr-2"></span>
+                    <span class="icon icon-delete hand-icon" (click) = "delteImage()"></span>
+                  </div>
+                </div>
+
+                <div class="memmorable-picture-gallery" >
+              
+                  <div>
+                    <image-cropper
+                        [imageChangedEvent]="imageChangedEvent"
+                        [maintainAspectRatio]="true"
+                        [aspectRatio]="4 / 3"
+                        [resizeToWidth]="128"
+                        [cropperMinWidth]="128"
+                        [onlyScaleDown]="true"
+                        [roundCropper]="false"
+                        [autoCrop] = "false"
+                        format="png"
+                        outputType="base64"
+                        (imageCropped)="imageCropped($event)"
+                        (imageLoaded)="imageLoaded()"
+                        (cropperReady)="cropperReady()"
+                        (loadImageFailed)="loadImageFailed()"
+                        [style.display]="showCropper ? null : 'none'"
+                    ></image-cropper>
+                  </div>
+                  <img class = "img-crop" [src]="croppedImage" *ngIf = 'imgHide'/> 
+                  <button class="crop-btn" (click)="flipVertical()" *ngIf = 'cropHide'>Update Crop iimage</button>
+                </div>
+              </div>
+
+
+          </div>
+          
+          <div class="warning-wrapper mt-3">
+              <div class="col-sm-12">
+              <span class="icon-circle_alert"></span>
+              <p>Please refrain from uploading pictures with inappropriate content.</p>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<div class="btn-wrapper">
+    <button class="submit" (click) = "sitationSuccess()">SUBMIT</button>
+    <button class="cancel" >CANCEL</button>
+</div>
+

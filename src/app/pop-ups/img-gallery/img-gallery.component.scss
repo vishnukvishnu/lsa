@@ -1,0 +1,111 @@
+
+@import '../../../scss//variables';
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+.update-btn{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 25px;
+    font-family: 'WiproAkkurat-Bold';
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #6F2C91;
+    border: 0px;
+    margin-left: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.title{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 2px solid color(sunny-yellow);
+    color: color(light-violet);
+    font-family: 'WiproAkkurat-Bold';
+    font-size: 18px;
+
+}
+.icon-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 24px;
+    opacity: .6;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.transperent-overlay{
+    position: absolute;
+    background: transparent;
+    width: 724px;
+    height: 350px;
+    z-index: 9999;
+    margin-top: 30px;
+}
+.fade-out {
+    background-image: linear-gradient(#151721, #000000);
+    opacity: .6;
+}
+.delete-wrapper{
+   
+    position: absolute;
+    top: 200px;
+    z-index: 9999;
+    display: block;
+    .relative-wrapper{
+        position: relative;
+    .icon-circle{
+        background: color(white);
+        border-radius: 50%;
+        padding: 12px 13px;
+        position: absolute;
+        left: 0px;
+        top: -10px;
+         display: block;
+         cursor: pointer;
+        .icon-delete{
+
+        }
+    }
+    .msg-details{
+        color: color(white);
+        position: absolute;
+        top: 30px;
+        width: 300px;
+        left: -70px;
+        .message{
+            font-family: 'WiproAkkurat-Regular';
+          font-size: 14px;
+        }
+        .cancel{
+            display: inline-block;
+            padding-left: 30px;
+            font-family: 'WiproAkkurat-Bold';
+            font-size: 14px; 
+        }
+        .button{
+            display: inline-block;
+            padding-left: 30px;
+            border-radius: 4px;
+            margin-left: 20px;
+            background: color(light-violet);
+            padding: 4px 24px;
+            font-size: 14px; 
+            cursor: pointer;
+            font-family: 'WiproAkkurat-Bold';
+        }
+    }
+}
+}

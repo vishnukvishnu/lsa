@@ -1,0 +1,254 @@
+@import '../../scss/variables';
+
+// My Nomination wrapper
+
+.img-container {
+    position: relative;
+    background-image: linear-gradient(#151721, #000000);
+    margin-top: 90px;
+    img{
+        width: 100%;
+        height: 100vh;
+        opacity: .3 ;
+    }
+    .img-update{
+        height: calc(100vh + 70px);
+    }
+    .hide{
+        display:none;
+    }
+    .show{
+        display:block;
+    }
+    .my-nomination-wrapper{
+        font-family: 'WiproAkkurat-Regular';
+        position: absolute;
+        top: 0px;   
+        .stepper{
+            padding-top: 30px;
+            padding-right: 88px;
+            padding-left: 28px;
+           .col-sm-1-half{
+                flex: 0 0 13.666667%;
+                max-width: 13.666667%;
+            }
+          
+            .circle{
+                background: color(sunny-yellow);
+                border-radius: 50%;
+                width:48px;
+                height: 48px;
+                position: relative;
+                float: right;
+                cursor: pointer;
+                left: -8px;
+            }
+            .stright-lines{
+                position: absolute;
+                top: 22px;
+                border-top: 2px dashed;
+                color: #FFFFFF;
+                width: 70%;
+                display: block;
+            }
+            .icon-status_pending{
+                font-size: 24px;
+                position: absolute;
+                left: 161px;
+                top: 12px;
+            }
+            .icon-check_mark {
+                font-size: 24px;
+                position: absolute;
+                left: 14px;
+                top: 12px;
+            }
+            .icon-status_pending{
+                color: color(white);
+                opacity: .7;
+            }
+            .blurred{
+                opacity: .3;
+            }
+            .years {
+                font-size: 16px;
+                color: white;
+                font-family: 'WiproAkkurat-Bold';
+                opacity: .6;
+                width: 90px;
+                height: 48px;
+                position: relative;
+                float: right;
+                cursor: pointer;
+                left: 75px;
+                top: 51px;
+            }
+            .years-first{
+                position: relative;
+                left: 95px;
+                top: 48px;
+                color: white;
+                font-size: 16px;
+                font-family: 'WiproAkkurat-Bold';
+            }
+        }
+        .welcome-wrapper:before{
+            content: "";
+            position: absolute;
+            background-image: linear-gradient(#EF3341, #6F2C91);
+            left: -34px;
+            top: -5px;
+            width: 34px;
+            height: 143px;
+            border-top-left-radius: 10px;
+        }
+        .welcome-wrapper{
+            margin: 100px 134px 0px 174px;
+            border-radius: 10px;
+            border-top-left-radius: 0px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            height: auto;
+            background:color(white);
+            position: relative;
+            border-top: 5px solid #EF3341;
+            .left-dy{
+                position: absolute;
+                top: 58px;
+                left: -70px;
+                color: color(white);
+                font-size: 16px;
+                font-family: 'WiproAkkurat-Bold';
+                transform: rotate(-90deg);
+            }
+            img {
+                width: 164px;
+                height: 164px;
+                position: absolute;
+                top: -80px;
+                left: 42%;
+                opacity: 1;
+            }
+            .row{
+                padding-left: 59px;
+                padding-right: 40px;
+            .name {
+                color: color(light-violet);
+                font-size: 32px;
+                padding-top:81px;
+                margin-bottom: 14px;
+            }
+            .about {
+                font-size: 14px;
+                opacity: .8;
+            }
+            .update {
+                font-size: 16px;
+
+                a{
+                    color: color(light-violet);
+
+                }
+            }
+            .click{
+                color:color(light-violet);
+            }
+        }
+        .btn-wrapper{
+            justify-content: flex-end;
+        .update-btn {
+            color: color(white);
+            text-transform: uppercase;
+            background: color(light-violet);
+            text-align: center;
+            border:0px;
+            padding: 7px 20px 5px 20px;
+            border-radius: 5px;
+            float: right;
+            margin-bottom: 23px;
+            margin-top: 26px;
+            font-size: 14px;
+            font-family: 'WiproAkkurat-Bold';
+        }
+    }
+        }
+    }
+    
+}
+
+
+.warning-wrapper{   
+    display: table;
+    background: color(light-gray);
+    padding: 17px;
+    border-radius: 4px;
+    width: 100%;
+    .icon-circle_alert {
+        color:color(ruby-red);
+        font-size: 24px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    p{
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 16px;
+        opacity: .8;
+        font-size: 14px;
+        font-family: 'WiproAkkurat-Regular';
+    }
+}
+
+@media (max-width: 767px) { 
+
+.img-container{
+
+    .my-nomination-wrapper{
+        .col-2 {
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+        }
+        .stepper { 
+            padding-top: 30px;
+            padding-right: 0px;
+            padding-left: 0px;
+            .stright-lines{
+                width: 55%;
+                top: 12px;
+                border-top: 1px dashed;
+            }
+            .circle{
+                width: 25px;
+                height: 25px;
+
+               .icon-check_mark {
+                font-size: 16px;
+                left: 4px;
+                top: 4px;
+                }
+                .icon-status_pending{
+                    font-size: 16px;
+                    left: 4px;
+                    top: 4px;
+                    color: color(white)
+                }
+            }
+        }
+    }
+
+}  
+.img-container{
+    .my-nomination-wrapper {
+
+        .welcome-wrapper{
+            margin: 100px 10px 100px 40px;
+
+            img{
+                width: 100px;
+                height: 100px;
+                top: -80px;
+                left: 32%;
+            }
+        }
+    } 
+} 
+}

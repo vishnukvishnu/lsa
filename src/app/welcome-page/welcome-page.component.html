@@ -1,0 +1,120 @@
+
+
+<div class="img-container" [@routerTransition]>
+  <img [ngClass]="user ? 'img-update':''" src="../../assets/images/LSA2@2x.png" alt="">
+
+  <div class="my-nomination-wrapper">
+      <div class="row stepper">
+        <div class="col-sm-1-half col-2 pr-0" >
+        <span class="years-first">5 years</span>  
+          <div class="circle" (click)  = "Milestone()">
+           <span class="icon-check_mark"></span>
+          </div>
+         
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-2" >
+            <span class="stright-lines"></span> 
+            <span class="icon-status_pending"></span> 
+            <div class="circle blurred" (click)  = "nextMilestone()"> </div>
+            <span class="years">10 years</span> 
+           
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-2">
+                <span class="stright-lines"></span>   
+                <span class="icon-status_pending"></span>
+                <div class="circle blurred"></div>
+                <span class="years">15 years</span>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-2">
+            <span class="stright-lines"></span>  
+            <span class="icon-status_pending"></span>
+            <div class="circle blurred"> </div>
+            <span class="years">20 years</span>
+           
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-2">
+            <span class="stright-lines"></span>  
+            <span class="icon-status_pending"></span>
+            <div class="circle blurred"> </div>
+            <span class="years">25 years</span>  
+           
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-2">
+            <span class="stright-lines"></span>  
+            <span class="icon-status_pending "></span>
+            <div class="circle blurred"></div>
+            <span class="years">30 years</span>  
+            
+        </div>
+      </div>
+
+      <div class="welcome-wrapper">
+        <p class="left-dy">09 Days 13 Hrs</p>
+        <img src="../../assets/images/5-yrs-logo.svg" alt="">
+        <div class="row">
+          <p class="name">Hi Jibin Matthew,</p>
+         <div  *ngIf  = "!tenShow" class="pr-4 mr-1">
+          <div [ngClass]="user ? 'hide':'show'">
+          <p class="about">
+              Welcome to Wipro Long Service Awards. As we are in a process of creating citation page for you,
+              we would request you to spend few minutes to share your experience during this tenure
+              with Wipro and nominate colleagues to share their thoughts for you on this milestone. 
+              You are requested to complete this by Date.
+          </p>
+          <p class="about"> We extend our best wishes to you on Years anniversary with Wipro.</p>
+          <p class="update">The countdown has begun! Click <a>‘Update Now’</a> to share your journey and nominate colleagues.</p>
+          </div>
+
+          <div class="about" [ngClass]="user ? 'show':'hide'">
+            <p >Welcome to India-Club 5!</p>
+            <p >
+                Congratulations on completing 5 years with WIPRO. In recognition of this milestone,
+                 we are pleased to offer you a small token of our gratitude.
+            </p>
+            <P>
+                <a class="click">Click here</a> to view various options available for you to redeem. 
+                Please log in to your LSA account using the ADID login credentials to redeem your award.
+            </P>
+            <p><strong>Your Award Code is: 6364281654985653.</strong></p>
+            <p> This is a time bound award with 1 year validity from the date of service anniversary.
+               Check the curated catalog for redemption to make this milestone memorable.
+            </p>
+            <p>In case of any query you may write to <strong>wipro.lsa@wipro.com</strong> copying <strong>lsa.wividus@wipro.com</strong></p>
+            
+          </div>
+         </div >
+         <div *ngIf  = "tenShow" class="pr-4 mr-1">
+                <p class="about">
+                        The key to employee loyalty is recognition. 
+                        Wipro’s Long service awards are aimed at reinforcing best behaviours and highlighting achievements,
+                         along with employee appreciation for their efforts. 
+                        The practice of rewarding employees for their long-term contribution to the organisation.
+                </p>
+
+                <div class="warning-wrapper mt-5 mb-4">
+                    <div class="">
+                        <span class="icon-circle_alert"></span>
+                        <p>
+                                You are not yet there! Completing 10 years at Wipro makes you eligible for the 
+                                next Long Service Award and accolades from your friends/colleagues.
+                                 Wish you all the very best!                       
+                         </p>
+                    </div>
+                </div>
+   
+         </div>
+
+        </div>
+        <div class="row btn-wrapper">
+            <button class="update-btn" [ngClass]="user || tenShow ? 'hide':'show'" (click) = "myNominations()">UPDATE NOW</button>
+            <button class="update-btn" [ngClass]="user ? 'show':'hide'" (click) = "myTenure()">VIEW CITATIONS</button>
+        </div>
+      </div>
+  </div>
+
+</div>  
+
+
+
+
+

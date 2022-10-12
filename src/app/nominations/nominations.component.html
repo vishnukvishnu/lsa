@@ -1,0 +1,159 @@
+
+
+<div class="fluid-container my-nominations">
+
+    <div class="sub-navigation" (click) = "home()">
+      <span class="icon-back_arrow"></span>
+      <p class="hand-icon">My nomination</p>
+    </div>
+  
+    <div class="my-nomination-container">
+
+      <div class="nomination-wrapper">
+        <div>
+        <p class="title mb-0">Share your journey with Wipro</p>
+        <hr class="border-yellow mt-1">
+        </div>
+
+        <div class="row mt-3 input-wrapper">
+            <mat-form-field class="example-full-width col-12 col-sm-12 col-md-12 col-lg-12">
+                 <input class = "text-dark" matInput placeholder = "Your journey so far" value ="Type here |" >
+            </mat-form-field>
+            <p>2000 characters</p>
+        </div>
+
+        <div class="warning-wrapper mt-3">
+          <div class="col-sm-12">
+          <span class="icon-circle_alert"></span>
+          <p>Please note that your citation would not be edited or verified post your submission. 
+            Kindly review the content prior to hitting the submit button.
+          </p>
+          </div>
+        </div>
+
+        <div class="row photograph-wrapper mt-3">
+            <div class="half-col margin-r"  [ngClass] = "profileImg  ? 'img-gallery-width': ''">
+            <div class="d-wrapper" [ngClass] = "profileImg  ? 'box-border-bottom': ''">
+            <div class="first-cell">
+            <p class="sub-title" >Profile photograph</p>
+            <p class="description">(JPEG & PNG format with 500Wx500 H px, file size 2MB only</p>
+            </div>
+            <!-- <div class="second-cell" *ngIf = "editable"> -->
+            <div class="second-cell" *ngIf = "!profileImg">
+                <input hidden type="file" (change)="ProfilehandleFileInput($event.target.files)" 
+                accept="image/*" #ProfilefileInput>
+              <span (click)="ProfilefileInput.click()" class="icon-attachment"></span>
+            </div>
+            <!-- <div class="editable pull-right" [ngClass]="editable ? 'hide' : 'show'"> -->
+            <div class="editable pull-right"  [ngClass]="!profileImg ? 'hide' : 'show'">
+              <input hidden type="file" (change)="ProfilehandleFileInput($event.target.files)" 
+              accept="image/*" #ProfilefileInput>
+              <span (click)="ProfilefileInput.click()" class="icon icon-edit hand-icon mr-2"></span>
+            </div>
+          </div>
+
+            <div class="profile-picture">
+                <img  [src]="updatedProfileImage" *ngIf = "profileImg" >
+            </div>  
+           </div>
+
+           <div class="half-col" [ngClass] = "memmoryImg  ? 'img-gallery-width': ''">
+              <div class="d-wrapper" [ngClass] = "memmoryImg  ? 'box-border-bottom': ''">
+            <div class="first-cell">
+            <p class="sub-title">Memorable photographs</p>
+            <p class="description">(JPEG & PNG format with 500Wx500 H px, file size 2MB only</p>
+            </div>
+            <div class="second-cell" *ngIf = "!memmoryImg">
+                <!-- <div class="second-cell" *ngIf = "editable"> -->
+                <input hidden type="file" (change)="MemmaroyhandleFileInput($event.target.files)" 
+                accept="image/*" #fileInput>
+              <span  (click)="fileInput.click()" class="icon-attachment"></span>
+            </div>
+            <!-- <div class="editable pull-right" [ngClass]="editable || !memmoryImg ? 'hide' : 'show'"> -->
+                <div class="editable pull-right" [ngClass]="!memmoryImg ? 'hide' : 'show'">
+                    <input hidden type="file" (change)="MemmaroyhandleFileInput($event.target.files)" 
+                    accept="image/*" #fileInput>
+                <span (click)="fileInput.click()" class="icon icon-edit hand-icon mr-2"></span>
+                <span class="icon icon-delete hand-icon" (click) = "delteImage()"></span>
+              </div>
+            </div>
+            <!-- <div class="memmorable-picture-gallery" *ngFor="let item of updatedImageGallery" *ngIf = "memmoryImg"> -->
+              <div class="memmorable-picture-gallery" >
+              <img class="img" *ngFor="let item of updatedImageGallery" [src]="item" >
+                <span class = "add-one-more"  *ngIf = "memmoryImg">
+                  <span class="value">+{{imgCount}}</span>
+                </span>
+            </div>
+           </div>
+
+        </div>
+       
+        <div class="warning-wrapper mt-3">
+            <div class="col-sm-12">
+            <span class="icon-circle_alert"></span>
+            <p>Please refrain from uploading pictures with inappropriate content.</p>
+            </div>
+        </div>
+
+          <div class="mt-5 ">
+              <p class="title float-left mr-3 mb-0">Nominate your peers and colleagues</p>
+              <span class="icon-circle_alert"></span>
+              <hr class="border-yellow mt-1">
+          </div>
+
+          <div class="row mt-4 input-wrapper">
+              <!-- <mat-form-field class="example-full-width col-4 col-sm-4 col-md-4 col-lg-4">
+                  <span class="icon-search"></span>
+                <input matInput placeholder = "Search contact" value ="Search by Name, Email ID, ADID" >
+              </mat-form-field> -->
+
+              <mat-form-field class="example-full-width col-4 col-sm-4 col-md-4 col-lg-4">
+                <span class="icon-search"></span>
+                <input type="text" class = "search-fields" placeholder="Search contacts" aria-label="Number" matInput [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                  <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+              
+          </div>
+
+          <div class="row title">
+              <p class="col-sm-12">Suggested names</p>
+          </div>
+
+          <div class="row suggested-names">
+              
+            <div class="star-wrapper " *ngFor="let item of nomineData">
+                  <div class="img-wrapper">
+                    <img [src] = "item.img" alt="">
+                  </div>
+                  <div class="description">
+                      <input hidden type="checkbox" name="checkbox" checked [id]="item.id" value="value">
+                      <label [for]="item.id" class="icon-star_filled"></label>       
+                      
+                    <p class="name">{{item.name}}</p>
+                    <p class="email">{{item.email}}</p>
+                  </div>
+                  <div class="star">
+                    <span class=""></span>
+                  </div>
+                </div>    
+    
+          </div>
+
+          <div class="row mt-3 btn-wrapper">
+              <button class="cancel" (click) = "CancelPopup()">CANCEL</button>
+              <button class="submit" *ngIf = "editable" (click) = "editNomination()">EDIT</button>
+              <button class="update" [ngClass]="editable ? 'hide' : 'show'"
+              (click) = "updateNomination()">Update</button>
+          </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+

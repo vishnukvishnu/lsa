@@ -1,0 +1,28 @@
+
+<div class="row completed-citation-wrapper" (click) = " profileCitations()" [@routerTransition]>
+  <div class="citation" *ngFor="let item of citaiotns">
+      <div class="profile-details">
+          <div class="t-row">
+          <div class="img-wrapper">
+                  <img src="../../assets/images/citations/Component.png" alt="">
+          </div>
+          <div class="description">
+              <p class="name">Darwin Williams</p>
+              <p class="email">darwin.williams@wipro.com</p>
+              <p class="position">Tech Lead</p>
+          </div>
+          <div class="completed">
+              <div class="circle">
+                  <span class="icon-check_mark"></span>
+              </div> 
+          </div>
+          </div>
+          <div class="about-section">
+              <p>There are those that just work, and let their good work speak for them, 
+                  Adapa is one fo them. The last few months I have.
+              </p>
+              <p class="dots">...</p>
+          </div>
+      </div>
+  </div>
+</div>

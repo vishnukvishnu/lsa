@@ -1,0 +1,25 @@
+
+$colors:(
+    ruby-red:#EF3341,
+    navy-blue:#0e3570,
+    sunny-yellow:#FFDA29,
+    dark-green:green,
+    apple-green:#6DC24B,
+    light-green:#208c75,
+    sky-blue: #00A2E0,
+    light-gray: #F4F4F4,
+    gray: #646363,
+    btn-gray: #C7C7C7,
+    black: #000,
+    white:#FFFFFF,
+    dark-violet: #280539,
+    light-violet: #6F2C91,
+    border-gray: #707070,
+
+);
+@function color($color-name){
+    @return map-get($map:$colors , $key: $color-name);
+};
+
+$width:100%;
+$border-radius: 50%;

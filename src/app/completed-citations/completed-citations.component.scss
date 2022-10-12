@@ -1,0 +1,97 @@
+
+@import '../../scss/variables';
+
+    .completed-citation-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+
+        .citation {
+            flex: 0 0 31.5%;
+            max-width: 31.5%;
+            margin-top: 24px;
+            // border: 1px solid color(light-gray);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            
+            .profile-details{
+                display: table;
+                font-family: 'WiproAkkurat-Regular';
+                width: 100%;
+                .t-row {
+                border-bottom: 1px solid color(light-gray);
+                padding: 16px 21px;
+                .img-wrapper{
+                    display: table-cell;
+                    vertical-align: middle;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                    }
+                }
+       
+                .description{
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 25px;
+                    .name{
+                        font-size: 16px;
+                        margin-bottom: 4px;
+                    }
+                    .email{
+                        font-size: 12px;
+                        opacity: .6;
+                        margin-bottom: 4px;
+                    }
+                    .position{
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                    }
+                }
+                .completed {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 50px; 
+                    .circle{
+                        width: 34px;
+                        height: 34px;
+                        background: color(light-violet);
+                        border-radius: 50%;
+                        position: relative;
+                        .icon-check_mark{
+                            color: color(white);
+                            font-size: 16px;
+                            top: 8px;
+                            position: absolute;
+                            left: 8px;
+                        }
+                    }
+                }
+                }
+                .about-section{
+                    font-family: 'WiproAkkurat-Regular';
+                    text-align: center;
+                    padding: 10px 26px;
+                    font-size: 16px;
+                    .dots{
+                        font-size: 24px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        .citation:nth-child(2){
+            margin: 24px 2.75% 0px 2.75%;
+        } 
+        .citation:nth-child(5){
+            margin: 24px 2.75% 0px 2.75%;
+        }
+        .citation:nth-child(8){
+            margin: 24px 2.75% 0px 2.75%;
+        } 
+        .citation:nth-child(11){
+            margin: 24px 2.75% 0px 2.75%;
+        }
+        .citation:nth-child(14){
+            margin: 24px 2.75% 0px 2.75%;
+        }
+    }

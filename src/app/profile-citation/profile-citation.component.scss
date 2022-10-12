@@ -1,0 +1,106 @@
+
+@import '../../scss/variables';
+
+.profile-citation-wrapper {
+
+    .sub-navigation{
+        background: color(dark-violet);
+        color: color(white);
+        padding-left: 34px;
+        position: fixed;
+        width: 100%;
+        top: 45px;
+        z-index: 99;
+    span {
+        size: 20px;
+        font-family: 'WiproAkkurat-Regular';
+        display: inline-block;
+    }
+    p{
+        size: 16px;
+        font-family: 'WiproAkkurat-Bold';
+        display: inline-block;
+        margin: 12px 0px 12px 24px;
+    }
+}
+    .citation {
+        margin: 30px 83px 60px 83px;
+        margin-top: 120px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        height: auto;
+        background:color(white);
+        border: 1px solid color(light-gray);
+        
+        .profile-details{
+
+            font-family: 'WiproAkkurat-Regular';
+            width: 100%;
+            .t-row {
+            border-bottom: 1px solid color(light-gray);
+            padding: 16px 21px;
+            .img-wrapper{
+                img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+   
+            .description{
+                padding-left: 25px;
+                .name{
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                }
+                .email{
+                    font-size: 12px;
+                    opacity: .6;
+                    margin-bottom: 4px;
+                }
+                .position{
+                    font-size: 12px;
+                    margin-bottom: 4px;
+                }
+            }
+            .completed {
+                float: right;
+                .circle{
+                    width: 34px;
+                    height: 34px;
+                    background: color(light-violet);
+                    border-radius: 50%;
+                    position: relative;
+                    float: right;
+                    margin-top: 18px;
+                    .icon-check_mark{
+                        color: color(white);
+                        font-size: 16px;
+                        top: 8px;
+                        position: absolute;
+                        left: 8px;
+                    }
+                }
+            }
+            }
+            .about-section{
+                padding: 16px 21px;
+            }
+            .image-container{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0px 27px 21px 27px;
+                .img-col{
+                    flex: 0 0 31.5%;
+                    max-width: 31.5%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .img-col:nth-child(even){
+                    margin: 0px 2.75%;
+                }
+            }
+        }
+    }
+}   

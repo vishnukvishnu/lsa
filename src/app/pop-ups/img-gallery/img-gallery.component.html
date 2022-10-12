@@ -1,0 +1,48 @@
+
+    <div class="fluid-container main-container">
+      <span class="icon-close" (click) = "onclose()"></span>
+      <p class="title">Photos</p>
+      <div class="transperent-overlay" [ngClass] = "msgShow ? 'fade-out' : ''" (click) = "deleteShowHide()"></div>
+      <div class="delete-wrapper" *ngIf = "deleteShow">
+        <div class="relative-wrapper">
+        <span class="icon-circle" (click) = "msgShowHide()">
+          <span class="icon-delete"></span>
+        </span>
+        <div *ngIf = "msgShow" class="msg-details">
+        <p class="message">Are you sure delete this phote ?</p>
+        <span class="cancel">CANCEL</span>
+        <span class="button" (click) = "deleteImage()">OK</span>
+        </div>
+      </div>
+      </div>
+      <!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages" (change)="onChange($event)">
+
+      </ngx-gallery>
+     -->
+      <button (click) = "updateProfile()" class="update-btn">Updated</button>
+
+      <!-- <input type="file" (change)="fileChangeEvent($event)" />
+
+<button (click)="flipVertical()">Flip vertical</button>
+
+<div>
+  <image-cropper
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [aspectRatio]="4 / 3"
+      [resizeToWidth]="128"
+      [cropperMinWidth]="128"
+      [onlyScaleDown]="true"
+      [roundCropper]="false"
+      [autoCrop] = "false"
+      format="png"
+      outputType="base64"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"
+      [style.display]="showCropper ? null : 'none'"
+  ></image-cropper>
+</div>
+<img [src]="croppedImage" /> -->
+ </div>

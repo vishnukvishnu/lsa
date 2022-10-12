@@ -1,0 +1,40 @@
+
+
+[
+    {
+        "img": "../assets/images/citations/Component.png",
+        "id": "checkbox_id0",
+        "name": "Abraham Raj",
+        "email": "abraham.raj@wipro.com"
+    },
+    {
+        "img": "../assets/images/citations/Ellipse 3-1.png",  
+        "id": "checkbox_id1",
+        "name": "Adrea Thomas",
+        "email": "andrea.thomas@wipro.com"
+    },
+    {
+        "img": "../assets/images/citations/Ellipse 3.png",
+        "id": "checkbox_id2",
+        "name": "Avinash Paul",
+        "email": "avinash.54@wipro.com"
+    },
+    {
+        "img": "../assets/images/citations/Ellipse 28.png",
+        "id": "checkbox_id3",
+        "name": "Cindrella Christy",
+        "email": "cindrella.chris@wipro.com"
+    },
+    {
+        "img": "../assets/images/citations/Ellipse 3-1.png",
+        "id": "checkbox_id4",
+        "name": "Vaishali Srivastava",
+        "email": "vaishali.sri@wipro.com"
+    },
+    {
+        "img": "../assets/images/citations/Ellipse 28.png",
+        "id": "checkbox_id5",
+        "name": "Samantha Paes",
+        "email": "Samantha.paes@wipro.com"
+    }
+]

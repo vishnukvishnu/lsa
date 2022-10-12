@@ -1,0 +1,39 @@
+@import '../../../scss/variables';
+
+.success-wrapper{
+    font-family: 'WiproAkkurat-Regular';
+    .title{
+        font-size: 20px;
+        color: color(light-violet);
+        margin-bottom: 4px;
+    }
+    .icon-close{
+        float: right;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .description{
+        font-size: 16px;
+        opacity: .8;
+    }
+    button{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 14px;
+        float: right;
+        color: #FFFFFF;
+        border: 0px;
+        border-radius: 4px;
+        font-family: 'WiproAkkurat-Bold';
+    }
+    .no{
+        background: color(white);
+        border: 1px solid color(btn-gray);
+        color: color(light-violet);
+        padding: 5px 42px 3px 42px;
+    }
+    .yes{
+        background: color(light-violet);
+        padding: 6px 40px 3.5px 40px;
+    }
+}

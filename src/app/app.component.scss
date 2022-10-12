@@ -1,0 +1,123 @@
+@import '../scss/variables';
+
+
+.app-main-container {
+    position: relative;
+}
+
+.tab-container{
+    margin-top: 40px;
+    z-index: 99;
+    .label-sub-title{
+        position: fixed;
+        left: 36px;
+        color: #FFFFFF;
+        font-family: 'WiproAkkurat-Bold';
+        font-size: 16px;
+        margin-bottom: 0px;
+        top: 55px;
+    }
+    ul{
+        background: color(dark-violet);
+        position: fixed;
+        width: 100%;
+        top: 45px;
+        z-index: 99 !important;
+        li{
+            display: inline-block;
+            padding: 10px 25px;
+            list-style: none;
+            font-size: 16px;
+            float: right;
+            a{
+            color:color(white);
+            font-family: 'WiproAkkurat-Regular';
+            font-size: 14px;
+            padding: 0px 30px 11px 30px;
+            }
+            a:hover{
+                text-decoration: none;
+                
+            }
+            .active-link{
+                border-bottom: 2.5px solid color(sunny-yellow);
+                padding-bottom:11px;
+                font-family: 'WiproAkkurat-Bold';
+            }
+            .active-link + .absent-count{ 
+                background: color(ruby-red);
+            }
+            .absent-count{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: color(light-violet);
+                color: white;
+                z-index: 999;  
+                font-size: 11px;
+                margin-left: 10px;
+                display: inline-block;  
+                position: relative;
+                left: -30px;
+                bottom: -5px;
+                .value{
+                    position: absolute;
+                    left: 4px;
+                    top: 2px;
+                }
+            }
+
+        }
+    }
+}
+
+
+   //Media Query For Mobile view
+
+   @media (max-width: 767px) { 
+
+    .tab-container{
+
+        .label-sub-title{
+            left:2px;
+            font-size: 11px;
+            top: 61px;
+        }
+
+        ul {
+            // padding-right: 210px;
+                li{
+                     padding: 10px 0px;
+                a{
+                    font-size: 10px;
+                    padding: 0px 5px 11px 0px;
+                }
+                .absent-count{
+                    left: -5px;
+                    width: 15px;
+                    height: 15px;
+                    font-size: 8px;
+                    .value{
+                        left: 3px;
+                        top: 1px;
+                    }
+                }
+                }
+        }
+    }
+
+   }
+.addActive{
+    border-bottom: 2.5px solid #FFDA29;
+    padding-bottom: 11px;
+    font-family: 'WiproAkkurat-Bold';
+}
+.addActive + .absent-count{ 
+    background: color(ruby-red) !important;
+}
+    //Media Query For Tablet view
+
+   @media (min-width: 768px) and (max-width: 1023px) {
+
+
+}
